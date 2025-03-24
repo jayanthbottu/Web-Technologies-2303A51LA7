@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Form container with glass effect */
+        form {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Heading styling */
+        h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        /* Input fields */
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ffccd5;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: 0.3s ease;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(5px);
+            outline: none;
+        }
+
+        /* Focus effect on input */
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #ff6f61;
+        }
+
+        /* Submit button */
+        input[type="submit"] {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s ease;
+        }
+
+        /* Hover effect on button */
+        input[type="submit"]:hover {
+            background: linear-gradient(135deg, #ff5c83, #ff3d68);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="LoginServlet" method="post">
+        <h2>Student Login</h2>
+        <input type="email" name="email" placeholder="Enter your email" required><br>
+        <input type="password" name="password" placeholder="Enter your password" required><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
